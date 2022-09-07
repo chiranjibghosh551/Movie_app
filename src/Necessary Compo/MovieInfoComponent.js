@@ -61,7 +61,7 @@ const MovieInfoComponent = (props) => {
 
   useEffect(() => {
     Axios.get(
-      `http://www.omdbapi.com/?i=tt3896198&apikey=733cdf22`,
+      `http://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`,
     ).then((response) => setMovieInfo(response.data));
   }, [selectedMovie]);
   return (
